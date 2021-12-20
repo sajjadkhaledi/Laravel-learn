@@ -15,9 +15,9 @@ class CategoryController extends Controller
 
 
 
-    // public function show($id){
+    public function show($id){
 
-    //     return view('admin.index', compact('id'));
+        return view('admin.index', compact('id'));
 
-    // }
+    }
 }
