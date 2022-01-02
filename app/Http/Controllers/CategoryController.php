@@ -43,12 +43,20 @@ class CategoryController extends Controller
 
 
     public function create(){
-        // return view('admin.create');
+        return view('admin.create');
         // return response()->download('1.png', 'hassan.png');
     }
 
     public function store(Request $request){
         // dd($request->all());
         // return redirect()->away('https://toplearn.com');
+    }
+
+    public function edit($id){
+        return view('admin.edit');
+    }
+
+    public function show($id){
+        // return view('admin.edit');
     }
 }

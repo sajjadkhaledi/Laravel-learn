@@ -84,13 +84,66 @@
    @endempty  --}}
 
 
-   @auth
+   {{-- @auth
        {{ 'yes' }}
    @endauth
 
    @guest
        {{ 'no' }}
-   @endguest
+   @endguest --}}
+
+   {{-- @for($i = 0; $i < 10; $i++)
+    {{ $i }}
+   @endfor --}}
+
+
+   {{-- @while (true)
+       {{ 'hi hassan' }}
+   @endwhile --}}
+
+   {{-- <?php
+   $users = ['hassan', 'ali', 'karim'];
+   ?> --}}
+   {{-- @foreach ($users as $user)
+    {{ $user }}
+   @endforeach --}}
+
+   {{-- @forelse ($users as $user)
+   {{ $user }}
+   @empty
+       {{ 'هیچ کاربری پیدا نشد' }}
+   @endforelse --}}
+
+   {{-- <?php
+   $users = ['hassan', 'ali', 'karim'];
+   ?> --}}
+
+   {{-- @foreach ($users as $user) --}}
+    {{-- @if($user == 'hassan') --}}
+    {{-- {{ 'hi hassan' }} --}}
+    {{-- @continue --}}
+    {{-- @break --}}
+    {{-- @endif --}}
+    {{-- {{ $user }} --}}
+   {{-- @endforeach --}}
+
+   {{-- @foreach ($users as $user) --}}
+   {{-- {{ $loop->iteration }} --}}
+   {{-- {{ $loop->count }} --}}
+   {{-- @if($loop->first)
+   {{ 'first' }}
+   @endif
+   @if($loop->last)
+   {{ 'last' }}
+   @endif
+   {{ $user }}
+    @endforeach --}}
+
+
+    {{-- @php
+        $status = false;
+    @endphp --}}
+
 
 </body>
 </html>
