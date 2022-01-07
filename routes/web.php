@@ -1,9 +1,10 @@
 <?php
 
+use App\Car;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoService;
-use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +17,16 @@ use Illuminate\Support\Facades\Redirect;
 |
 */
 
-// Route::get('/', function(){
-//     echo 'hi';
+
+
+// Route::get('/', function(Car $car){
+//     return view('welcome', compact('car'));
 // });
+
+Route::get('/', function(){
+    return view('welcome');
+});
+
+
 
 // Route::resource('category', CategoryController::class);
-
-
-// Route::get('test', function(){
-    // return redirect();
-    // return redirect()->back();
-    // return redirect()->route('category.index', ['id' => 2]);
-    // return redirect()->action([CategoryController::class,'index']);
-        // return redirect()->route('category.index')->with('status', 'enable');
-// });
-
-
-
-
-Route::resource('category', CategoryController::class);

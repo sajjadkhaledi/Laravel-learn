@@ -15,32 +15,10 @@
 </head>
 <body>
 
-    {{-- @include('admin.layouts.sidebar') --}}
-    {{-- @include('admin.layouts.sidesadsdasdasdasbar') --}}
-    {{-- @includeIf('admin.layouts.sidesadsdasdasdasbar') --}}
-        {{-- @include('admin.layouts.sidebar', ['some' => 'data']) --}}
-        {{-- @includeWhe(true ,'admin.layouts.sidebar', ['some' => 'data']) --}}
-
-        {{-- @includeWhe($user->age >= 18 ,'admin.layouts.sidebar', ['some' => 'data']) --}}
-
-        @if(count($projectes) > 0)
-        <ul>
-            @foreach ($projects as $projecte)
-                @include('admin.layouts.patials.error', $projecte)
-            @endforeach
-        </ul>
-        @else
-        @include('admin.layouts.patials.none-error')
-        @endif
-
-
-        @each('admin.layouts.partials.error', $projectes , 'project', 'admin.layouts.patials.none-error');
-
-
-
-
     <div class="container">
         @yield('content')
+
+        {{ $count }}
 
     </div>
 

@@ -5,21 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
 
-    <h1>Hi</h1>
+    <h1>Hello</h1>
+    {{-- @component('button')
+    @slot('text')
+    click
+    @endslot
+    @slot('color')
+    primary
+    @endslot
+    @endcomponent
 
-    {{-- <a href="/category">click</a> --}}
-    {{-- <a href="<?= url('category') ?>">click</a> --}}
-    {{-- <a href="<?= route('users') ?>">click</a> --}}
-    {{-- <a href="<?= route('users.create') ?>">click</a> --}}
-    {{-- <a href="<?= url('users/create') ?>">click</a> --}}
-    {{-- <a href="<?= route('users.edit', 2) ?>">click</a> --}}
-    {{-- <a href="<?= route('users.edit', [2, 'hassan']) ?>">click</a> --}}
-    {{-- <a href="<?= route('users.edit', ['id' => 2, 'name' => 'hassan']) ?>">click</a> --}}
-    {{-- <a href="<?= route('users.edit', ['name' => 'hassan', 'id' => 2]) ?>">click</a> --}}
-    {{-- <a href="<?= route('users.edit', ['name' => 'hassan', 'id' => 2,  'opt' => 'karim']) ?>">click</a> --}}
+
+
+    @component('button')
+
+    @slot('text')
+    hassan
+    @endslot
+    @slot('color')
+    danger
+    @endslot
+
+
+    some text
+    @endcomponent --}}
+
+    {{-- <x-button /> --}}
+
+
+    {{-- <x-test.button>
+    </x-test.button> --}}
+
+
+    {{-- @php
+        $message = 'click';
+    @endphp
+        <x-button :message="$message" type="btn btn-danger"></x-button>
+ --}}
+
+@inject('car', 'App\Car')
+
+        {{ $car->count() }}
 
 </body>
 </html>
