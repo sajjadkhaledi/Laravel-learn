@@ -10,6 +10,7 @@
     @section('styles')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    @stack('css')
     @show
     @yield('style')
 </head>
@@ -18,7 +19,7 @@
     <div class="container">
         @yield('content')
 
-        {{ $count }}
+        {{-- {{ $count }} --}}
 
     </div>
 

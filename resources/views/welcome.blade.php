@@ -47,9 +47,10 @@
         <x-button :message="$message" type="btn btn-danger"></x-button>
  --}}
 
-@inject('car', 'App\Car')
+{{-- @inject('car', 'App\Car')
+        {{ $car->count() }} --}}
 
-        {{ $car->count() }}
+        {{-- @hassan --}}
 
 </body>
 </html>

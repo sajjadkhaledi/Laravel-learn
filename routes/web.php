@@ -23,10 +23,10 @@ use App\Http\Controllers\CategoryController;
 //     return view('welcome', compact('car'));
 // });
 
-Route::get('/', function(){
-    return view('welcome');
-});
+// Route::get('/', function(){
+//     return view('welcome');
+// });
 
 
 
-// Route::resource('category', CategoryController::class);
+Route::resource('category', CategoryController::class);

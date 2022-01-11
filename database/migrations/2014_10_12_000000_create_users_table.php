@@ -15,7 +15,28 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            // $table->bigIncrements('view');
+            // $table->bigInteger('price');
+            // $table->dateTime('birthday');
+            // $table->date('year');
+            // $table->decimal('price', 10, 3);
+            // $table->double('price', 10, 3);
+            // $table->enum('status', ['enabled', 'disabled']);
+            // $table->float('status', 10, 3);
+            // $table->foreignId('post_id');
+            // $table->increments('post_id');
+            // $table->integer('age');
+            // $table->longText('html');
+            // $table->mediumIncrements('id');
+            // $table->mediumInteger('price');
+            // $table->set('favcolor', ['red', 'green', 'blue']);
+            // $table->string('name');
+            // $table->text('comment');
+            // $table->time('newYear');
+            // $table->timestamp('birthDay');
+            // $table->unsignedBigInteger('price');
+            // $table->unsignedDecimal('price');
+            // $table->year('year');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

@@ -2,9 +2,15 @@
 @section('title')
 صفحه ساخت
 @endsection
-@section('style')
+{{-- @section('style')
 <link rel="stylesheet" href="custom.css">
-@endsection
+@endsection --}}
+@push('css')
+<link rel="stylesheet" href="custom.css">
+@endpush
+@prepend('css')
+<link rel="stylesheet" href="extra.css">
+@endprepend()
 {{-- @include('admin.layouts.sidebar') --}}
 
 @section('content')
