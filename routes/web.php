@@ -1,6 +1,7 @@
 <?php
 
 use App\Car;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoService;
 use Illuminate\Support\Facades\Redirect;
@@ -17,16 +18,10 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-
-
-// Route::get('/', function(Car $car){
-//     return view('welcome', compact('car'));
-// });
-
-// Route::get('/', function(){
-//     return view('welcome');
-// });
+Route::get('/', function(){
+    User::factory()->count(100)->create();
+});
 
 
 
-Route::resource('category', CategoryController::class);
+// Route::resource('category', CategoryController::class);
