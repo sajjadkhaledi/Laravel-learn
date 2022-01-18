@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,15 +16,6 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0; $i < 20; $i++){
-
-            DB::table('categories')->insert([
-
-                'name' => Str::random(5)
-
-            ]);
-
-        }
-
+        // Post::factory()->count(50)->create();
     }
 }

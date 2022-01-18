@@ -1,6 +1,7 @@
 <?php
 
 use App\Car;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoService;
@@ -18,10 +19,15 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function(){
-    User::factory()->count(100)->create();
-});
+// Route::get('/', function(){
+    // Post::factory()->count(50)->create();
+// });
 
 
 
-// Route::resource('category', CategoryController::class);
+Route::resource('category', CategoryController::class);
+
+
+// user_id
+// post_id
+// comment
