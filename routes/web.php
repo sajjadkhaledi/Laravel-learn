@@ -27,6 +27,10 @@ use App\Http\Controllers\CategoryController;
 
 Route::resource('category', CategoryController::class);
 
+// Route::get('post/show/{id}', [CategoryController::class, 'show']);
+// Route::get('post/show/{post}', [CategoryController::class, 'show']);
+// Route::get('user/show/{user:email}', [CategoryController::class, 'show']);
+
 
 // user_id
 // post_id
