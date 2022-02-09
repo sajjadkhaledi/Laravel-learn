@@ -106,7 +106,7 @@ return [
     |
     */
 
-    'faker_locale' => 'fa_IR',
+    'faker_locale' => 'en_US',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,7 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\TestServiceProvider::class,
 
     ],
 

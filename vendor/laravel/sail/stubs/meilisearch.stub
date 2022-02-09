@@ -1,12 +1,9 @@
     meilisearch:
         image: 'getmeili/meilisearch:latest'
-        platform: linux/x86_64
         ports:
             - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
-        environment:
-            MEILI_DB_PATH: '/data.ms'
         volumes:
-            - 'sailmeilisearch:/data.ms'
+            - 'sail-meilisearch:/data.ms'
         networks:
             - sail
         healthcheck:

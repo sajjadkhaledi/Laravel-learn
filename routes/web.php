@@ -1,13 +1,6 @@
 <?php
 
-use App\Car;
-use App\Models\Post;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PhotoService;
-use Illuminate\Support\Facades\Redirect;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,20 +13,6 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-// Route::get('/', function(){
-    // Post::factory()->count(50)->create();
-// });
-
-
-
-Route::resource('category', CategoryController::class);
-Route::resource('product', ProductController::class);
-
-// Route::get('post/show/{id}', [CategoryController::class, 'show']);
-// Route::get('post/show/{post}', [CategoryController::class, 'show']);
-// Route::get('user/show/{user:email}', [CategoryController::class, 'show']);
-
-
-// user_id
-// post_id
-// comment
+Route::get('/', function () {
+    return view('welcome');
+});
