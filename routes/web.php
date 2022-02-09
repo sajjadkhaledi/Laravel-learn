@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Address;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +18,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+//    $user = User::find(1);
+//     dd($user->address()->get());
+//     dd($user->address);
+    //    $address = Address::find(1);
+    //    dd($address->user->name);
+
+
+    //    $category = Category::find(1);
+    // dd($category->posts);
+
+    $post = Post::find(1);
+    dd($post->category);
+
 });
