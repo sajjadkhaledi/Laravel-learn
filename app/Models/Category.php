@@ -13,4 +13,11 @@ class Category extends Model
     {
         return $this->hasMany(Post::class, 'cat_id');
     }
+
+    public function latestPost()
+    {
+        return $this->hasOne(Post::class,'cat_id')->latestOfMany();
+        // return $this->hasOne(Post::class,'cat_id')->oldestOfMany();
+        // return $this->hasOne(Post::class,'cat_id')->ofMany('view', 'max');
+    }
 }

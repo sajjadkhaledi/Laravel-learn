@@ -3,6 +3,8 @@
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Image;
+use App\Models\Video;
 use App\Models\Address;
 use App\Models\Category;
 use App\Models\Mechanic;
@@ -21,40 +23,47 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    // user->car->info
 
-    // mechanic->car->owner
+        // $post = Post::find(1);
 
-    // $mechanic = Mechanic::find(1);
-    // dd($mechanic->carOwner);
+        // dd($post->image);
 
 
-    // countries->users->posts
+//    $user = User::find(1);
+
+//         dd($user->image);
+
+    // $image = Image::find(2);
+
+    // dd($image->imageable);
 
 
-    // $mechanic = Mechanic::find(1);
-    // dd($mechanic->carOwners);
+        //     $post = Post::find(1);
+
+        // dd($post->images);
 
 
-//    $post = Post::find(1);
-//     dd($post->tags);
-//   $tag = Tag::find(1);
-//     foreach ($tag->posts as $post){
-//         echo $post->pivot->created_at;
-//     }
+//    $user = User::find(1);
 
-    $post = Post::find(1);
+//         dd($user->images);
 
-    // $post->tags()->attach(2);
-    // $post->tags()->attach(2);
-    // $post->tags()->attach(2);
-    // $post->tags()->attach(2);
-    // $post->tags()->attach(2);
-    // $post->tags()->detach(2);
+    // $image = Image::find(2);
+
+    // dd($image->imageable);
+
+    // $post = Post::find(1);
+
+    // dd($post->tags);
 
 
-    // $post->tags()->sync(2);
-    $post->tags()->sync([1, 2]);
+//   $video = Video::find(1);
 
+//     dd($video->tags);
+
+
+    $category = Category::find(1);
+
+    // dd($category->posts);
+    dd($category->latestPost);
 
 });

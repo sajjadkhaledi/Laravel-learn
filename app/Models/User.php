@@ -47,4 +47,15 @@ class User extends Authenticatable
         return $this->hasOne(Address::class);
         // return $this->hasOne(Address::class, 'my_id', 'addressID');
     }
+
+
+    // public function image()
+    // {
+    //     return $this->morphOne(Image::class, 'imageable');
+    // }
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 }

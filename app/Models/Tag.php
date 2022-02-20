@@ -9,8 +9,18 @@ class Tag extends Model
 {
     use HasFactory;
 
+    // public function posts()
+    // {
+    //     return $this->belongsToMany(Post::class);
+    // }
+
     public function posts()
     {
-        return $this->belongsToMany(Post::class);
+        return $this->morphedByMany(Post::class, 'taggable');
+    }
+
+    public function videos()
+    {
+        return $this->morphedByMany(Video::class, 'taggable');
     }
 }

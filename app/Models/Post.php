@@ -14,8 +14,23 @@ class Post extends Model
         return $this->belongsTo(Category::class, 'cat_id');
     }
 
+    // public function tags()
+    // {
+    //     return $this->belongsToMany(Tag::class);
+    // }
+
+    // public function image()
+    // {
+    //     return $this->morphOne(Image::class, 'imageable');
+    // }
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
+
     public function tags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 }
