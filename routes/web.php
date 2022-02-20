@@ -9,6 +9,7 @@ use App\Models\Address;
 use App\Models\Category;
 use App\Models\Mechanic;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,49 +22,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
 
-        // $post = Post::find(1);
 
-        // dd($post->image);
-
-
-//    $user = User::find(1);
-
-//         dd($user->image);
-
-    // $image = Image::find(2);
-
-    // dd($image->imageable);
+// });
 
 
-        //     $post = Post::find(1);
-
-        // dd($post->images);
-
-
-//    $user = User::find(1);
-
-//         dd($user->images);
-
-    // $image = Image::find(2);
-
-    // dd($image->imageable);
-
-    // $post = Post::find(1);
-
-    // dd($post->tags);
-
-
-//   $video = Video::find(1);
-
-//     dd($video->tags);
-
-
-    $category = Category::find(1);
-
-    // dd($category->posts);
-    dd($category->latestPost);
-
-});
+Route::resource('category', CategoryController::class);
