@@ -27,6 +27,7 @@
         </ul>
     </div>
 
+
     @endif --}}
 
     <div class="container m-5 p-5 border">
@@ -43,31 +44,38 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
-                    <div class="form-group">
+                    {{--  <div class="form-group">
                       <label for="name">description:</label>
-                      <input type="text" name="description" value="{{ old('description') }}" class="form-control" placeholder="Enter description" id="description">
+                      <input type="text" name="description[]" value="{{ old('description') }}" class="form-control" placeholder="Enter description" id="description">
+                      <input type="text" name="description[second]" value="{{ old('description') }}" class="form-control" placeholder="Enter description" id="description">
                     </div>
                     @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                    @enderror  --}}
 
-
-                 <div class="form-group">
-                      <label for="name">hassan:</label>
-                      <input type="text" name="hassan" value="{{ old('hassan') }}" class="form-control" placeholder="Enter description" id="description">
-                    </div>
-                    @error('hassan')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-
-
-                 <div class="form-group">
+                 {{--  <div class="form-group">
                       <label for="name">email:</label>
                       <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Enter description" id="description">
                     </div>
                     @error('email')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
+
+                <div class="form-group">
+                      <label for="password">password:</label>
+                      <input type="password" name="password" value="{{ old('password') }}" class="form-control" placeholder="Enter password" id="password">
+                    </div>
+                    @error('password')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                <div class="form-group">
+                      <label for="password">confirm password:</label>
+                      <input type="password" name="password_confirmation" value="{{ old('password_confirmation') }}" class="form-control" placeholder="Enter password" id="password">
+                    </div>
+                    @error('password_confirmation')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror  --}}
 
 
                     <button type="submit" class="btn btn-primary">Submit</button>

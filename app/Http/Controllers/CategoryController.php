@@ -45,6 +45,15 @@ class CategoryController extends Controller
         //     'user_id' => 'exists:users,id',
         //     'user_id' => 'exists:users,id',
         // ]);
+        // if($errors->has('email')){
+
+        // }
+        // foreach($errors->get('email') as $message){
+
+        // }
+        foreach($errors->get('favcolors.*') as $message){
+
+        }
         // dd($request->validated());
         // dd($request->safe()->only(['name', 'email']));
         // dd($request->safe()->except(['name', 'email']));

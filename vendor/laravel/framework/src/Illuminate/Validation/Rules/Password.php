@@ -303,7 +303,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
             $value = (string) $value;
 
             if ($this->mixedCase && ! preg_match('/(\p{Ll}+.*\p{Lu})|(\p{Lu}+.*\p{Ll})/u', $value)) {
-                $validator->errors()->add($attribute, 'The :attribute must contain at least one uppercase and one lowercase letter.');
+                $validator->errors()->add($attribute, ' :attribute باید شامل یک حرف بزرگ و یک حرف کوچک باشد');
             }
 
             if ($this->letters && ! preg_match('/\pL/u', $value)) {
