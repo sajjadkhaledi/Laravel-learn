@@ -1,15 +1,6 @@
 <?php
 
-use App\Models\Tag;
-use App\Models\Post;
-use App\Models\User;
-use App\Models\Image;
-use App\Models\Video;
-use App\Models\Address;
-use App\Models\Category;
-use App\Models\Mechanic;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +13,12 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-// Route::get('/', function () {
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-
-// });
-
-
-Route::resource('category', CategoryController::class);
+require __DIR__.'/auth.php';
