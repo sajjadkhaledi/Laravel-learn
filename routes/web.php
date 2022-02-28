@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,25 @@ Route::get('/', function () {
     // $user = User::find(1);
     // Auth::login($user);
     // Auth::loginUsingId(2);
-    // return view('welcome');
+
+    // $posts = Post::all();
+    // $posts = Post::with('comments')->get();
+    // $posts = Post::with('comments', 'images')->get();
+//    foreach ($posts as $post) {
+    //    dump($post); // select * from comments where post_id in (1, 2, 3, 4, 5, 6)
+    //    dump($post->comments); //select * from comments where post_id = 1
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+    //    dump($post->comments); //select * from comments where post_id = 2
+//    }
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
@@ -47,3 +67,5 @@ Route::get('/dashboard', function () {
 // auth()
 
 
+
+Route::resource('category', CategoryController::class);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCategoryRequest;
+use Illuminate\Support\MessageBag;
 
 class CategoryController extends Controller
 {
@@ -25,7 +26,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        $error = new MessageBag();
+        $error->add('error', 'خطا رخ داده است');
+        return view('category.create')->withErrors($error);
     }
 
     /**

@@ -11,6 +11,7 @@
 <body>
 
     <h1>create</h1>
+    {{ dd($errors) }}
 {{--
     @if($errors->any())
 

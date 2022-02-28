@@ -11,8 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-]);
+// mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+//     require('postcss-import'),
+//     require('tailwindcss'),
+//     require('autoprefixer'),
+// ]);
+
+// mix.styles([
+//     'public/css/first.css',
+//     'public/css/second.css',
+// ], 'public/css/all.css');
+
+// mix.scripts([
+//     'public/js/first.js',
+//     'public/js/second.js',
+// ], 'public/js/all.js');
