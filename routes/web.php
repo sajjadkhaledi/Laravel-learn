@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +17,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // $user = User::find(1);
+    // Auth::login($user);
+    // Auth::loginUsingId(2);
+    // return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// $user = Auth::user();
+// $user = Auth::id();
+// dd($user);
+// $request->user();
+// dd(Auth::check());
+    // return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+// })->middleware(['password.confirm'])->name('dashboard');
+
+
+// require __DIR__.'/auth.php';
+
+// Route::get('/test-login', [LoginController::class, 'create']);
+// Route::post('/test-login/store', [LoginController::class, 'store'])->name('testLogin.store');
+// Route::get('/panel-admin', function () {
+//     dd('admin');
+// })->name('panelAdmin');
+
+
+// auth()
+
+
