@@ -11,7 +11,7 @@
 <body>
 
     <h1>create</h1>
-    {{ dd($errors) }}
+    {{-- {{ dd($errors) }} --}}
 {{--
     @if($errors->any())
 
@@ -34,7 +34,7 @@
     <div class="container m-5 p-5 border">
         <div class="row">
             <div class="col">
-                <form action="{{ route('category.store') }}" method="post">
+                <form action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -44,6 +44,14 @@
                     @error('name')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
+
+                    {{-- <input type="text" name="employees[0][firstName]">
+                    <input type="text" name="employees[0][lastName]">
+                    <input type="text" name="employees[1][firstName]">
+                    <input type="text" name="employees[1][lastName]"> --}}
+
+                    <label for="">image</label>
+                    <input type="file" name="image" id="">
 
                     {{--  <div class="form-group">
                       <label for="name">description:</label>

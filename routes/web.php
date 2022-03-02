@@ -4,6 +4,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
 
@@ -41,6 +42,7 @@ Route::get('/', function () {
     //    dump($post->comments); //select * from comments where post_id = 2
 //    }
     return view('welcome');
+// })->middleware('checkAge');
 });
 
 Route::get('/dashboard', function () {
@@ -68,4 +70,31 @@ Route::get('/dashboard', function () {
 
 
 
-Route::resource('category', CategoryController::class);
+// Route::resource('category', CategoryController::class);
+
+// Route::prefix('admin')->middleware(['checkAge'])->group(function () {
+//     Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     }); Route::get('users', function () {
+//         // Matches The '/admin/users' URL
+//     });
+// });
+
+
+Route::get('car', [CarController::class, 'calc']);
