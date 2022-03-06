@@ -20,81 +20,12 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    // $user = User::find(1);
-    // Auth::login($user);
-    // Auth::loginUsingId(2);
-
-    // $posts = Post::all();
-    // $posts = Post::with('comments')->get();
-    // $posts = Post::with('comments', 'images')->get();
-//    foreach ($posts as $post) {
-    //    dump($post); // select * from comments where post_id in (1, 2, 3, 4, 5, 6)
-    //    dump($post->comments); //select * from comments where post_id = 1
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-    //    dump($post->comments); //select * from comments where post_id = 2
-//    }
     return view('welcome');
-// })->middleware('checkAge');
 });
 
 Route::get('/dashboard', function () {
-
-// $user = Auth::user();
-// $user = Auth::id();
-// dd($user);
-// $request->user();
-// dd(Auth::check());
-    // return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-// })->middleware(['password.confirm'])->name('dashboard');
 
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
 
-// Route::get('/test-login', [LoginController::class, 'create']);
-// Route::post('/test-login/store', [LoginController::class, 'store'])->name('testLogin.store');
-// Route::get('/panel-admin', function () {
-//     dd('admin');
-// })->name('panelAdmin');
-
-
-// auth()
-
-
-
-// Route::resource('category', CategoryController::class);
-
-// Route::prefix('admin')->middleware(['checkAge'])->group(function () {
-//     Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     }); Route::get('users', function () {
-//         // Matches The '/admin/users' URL
-//     });
-// });
-
-
-Route::get('car', [CarController::class, 'calc']);
