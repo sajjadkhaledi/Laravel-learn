@@ -2,6 +2,8 @@
 
 use App\Models\Post;
 use App\Models\User;
+use App\Jobs\ProcessPost;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
@@ -20,11 +22,25 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    // Log::emergency('emergency');
+    // Log::alert('emergency');
+    // Log::critical('emergency');
+    // Log::error('emergency');
+    // Log::warning('emergency');
+    // Log::notice('emergency');
+    // Log::info('emergency');
+    // Log::debug('message');
+    // dd('hi');
+    // ProcessPost::dispatch()->delay(now()->addMinutes(1));
+    // return view('welcome');
 });
 
 Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
+
+
+Route::resource('category', CategoryController::class);
 
 
 require __DIR__.'/auth.php';
